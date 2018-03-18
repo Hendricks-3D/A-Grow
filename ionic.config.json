@@ -1,0 +1,8 @@
+{
+  "name": "A-Grow",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
