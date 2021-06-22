@@ -1,0 +1,87 @@
+<!--
+  Generated template for the ProductIssuePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar color="danger">
+        <ion-title>Report Issue</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <div class="uploadImg">
+
+        <button ion-button medium (click)="openCamera()" clear> <ion-icon name="ios-camera-outline" class="cam-icon"></ion-icon> </button>
+
+    </div>
+
+    <ion-list>
+        <ion-item>
+            <ion-label floating>Topic</ion-label>
+            <ion-input type="text" [(ngModel)]="issue.title"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Issue</ion-label>
+            <ion-input type="text" [(ngModel)]="issue.message"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Full Name</ion-label>
+            <ion-input type="text" [(ngModel)]="issue.name"></ion-input>
+        </ion-item>
+
+        <ion-list>
+            <ion-item>
+                <ion-label>Issue Type</ion-label>
+                <ion-select [(ngModel)]="issue.parish">
+                    <ion-option value="Hanover">Hanover</ion-option>
+                    <ion-option value="St. Elizabeh">St. Elizabeh</ion-option>
+                    <ion-option value="ST. JAMESr">ST. JAMES</ion-option>
+                    <ion-option value="Trelawny">Trelawny</ion-option>
+                    <ion-option value="Westmoreland">Westmoreland</ion-option>
+                    <ion-option value="Clarendon">Clarendon</ion-option>
+                    <ion-option value="St. Ann">St. Ann</ion-option>
+                    <ion-option value="ST. Catherine">St. Catherine</ion-option>
+                    <ion-option value="St. Mary">St. Mary</ion-option>
+                    <ion-option value="Kingston">Kingston</ion-option>
+                    <ion-option value="Portland">Portland</ion-option>
+                    <ion-option value="St. Andrew">St. Andrewr</ion-option>
+                    <ion-option value="St. Thomas">St. Thomas</ion-option>
+                    <ion-option value="Manchester">Manchester</ion-option>S
+
+                </ion-select>
+            </ion-item>
+        </ion-list>
+
+        <ion-item>
+            <ion-label floating>Country</ion-label>
+            <ion-input type="text" [(ngModel)]="issue.country"></ion-input>
+        </ion-item>
+    </ion-list>
+
+    <ion-list>
+        <ion-item>
+            <ion-label>Issue Type</ion-label>
+            <ion-select [(ngModel)]="issue.type">
+                <ion-option value="Praedial">Praedial Larceny</ion-option>
+                <ion-option value="Soil">Soil Quality</ion-option>
+                <ion-option value="Weather">Weather Condition</ion-option>
+                <ion-option value="Water">Lack of Water</ion-option>
+                <ion-option value="Pest">Pest</ion-option>
+                <ion-option value="other">Other</ion-option>
+
+            </ion-select>
+        </ion-item>
+    </ion-list>
+
+
+    <button ion-button block (click)="reportIssue(issue)" color="dark">Report</button>
+
+</ion-content>
